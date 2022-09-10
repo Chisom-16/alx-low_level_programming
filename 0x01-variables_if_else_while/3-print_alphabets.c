@@ -16,8 +16,7 @@ int main(void)
 			putchar(sm_letter);
 		putchar(lg_letter);
 		if (lg_letter == 'Z')
-			putchar(lg_letter);
-
+			putchar('\n');
 	}
 	return (0);
 }
