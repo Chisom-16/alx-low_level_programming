@@ -3,31 +3,29 @@
 /**
  * print_triangle - a function that prints a triangle
  * @size: size of the triangle
- * Return: triangle of '#'s
+ * Return: Does not return anything
  *
  */
 
 void print_triangle(int size)
 {
-	int sp, ro, tr;
+	int par1, par2, space, output;
 
-	if (size <= 0)
+	for (par1 = 1; par1 <= size; par1++)
 	{
+		space = size - par1;
+		output = size - space;
+
+		for (par2 = 1; par2 <= space; par2++)
+		{
+			_putchar(' ');
+		}
+		for (par2 = 1; par2 <= output; par2++)
+		{
+			_putchar('#');
+		}
 		_putchar('\n');
 	}
-	else
-	{
-		for (ro = 0; ro <= (size - 1); ro++)
-		{
-			for (sp = 0; sp < (size - 1) - ro; sp++)
-			{
-				_putchar(' ');
-			}
-			for (tr = 0; tr <= ro; tr++)
-			{
-				_putchar('#');
-			}
-			putchar('\n');
-		}
-	}
+	if (size <= 0)
+		_putchar('\n');
 }
