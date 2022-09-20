@@ -1,23 +1,23 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * _strcpy - copies the string pointed to by the arc
- * @dest: pointernto strof destination
- * @src: pointer to str origin
- * Return: string
+ * print_array - print n elements of an array of integers
+ * @a: elements of an array
+ * @n: number of values
+ * Return: 0
  */
 
-char *_strcpy(char *dest, char *src)
+void print_array(int *a, int n)
 {
-	int len = 0;
+	int s;
 
-	while (*(src + len) != '\0')
+	for (s = 0; s < n; s++)
 	{
-		*(dest + len) = *(src + len);
-		len++;
+		printf("%d", a[s]);
+		if (s != n - 1)
+			printf(", ");
 	}
 
-	*(dest + len) = '\0';
-
-	return (dest);
+	printf("\n");
 }
