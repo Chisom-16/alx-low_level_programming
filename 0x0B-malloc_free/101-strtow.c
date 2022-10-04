@@ -65,9 +65,9 @@ char **strtow(char *str)
 			w[wc][l] = '\0';
 			wc++;
 			i += j;
-			else
-				i++;
 		}
-		return (w);
+		else
+			i++;
 	}
+	return (w);
 }
